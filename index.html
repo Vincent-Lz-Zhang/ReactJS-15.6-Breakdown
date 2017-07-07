@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>React 15.6 Step By Step</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/layout.css" type="text/css">
+  <style media="screen">
+    li {
+      margin-top: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">React 15.6</a></h1>
+        <h2>Learn step by step</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Demo</a></li>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">About</a></li>
+          <li class="last"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  </div>
+
+
+
+  <!-- content -->
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+
+
+      <section>
+
+        <div id="reactContent" class="">
+
+        </div>
+
+        <p style="font-size: 28px;">
+          Highlights
+        </p>
+        <ul>
+          <li>Not intended to be a write once, run anywhere solution; but learn once, write anywhere. --[Mastering React Native]</li>
+          <li>It is often relegated to only a view-layer solution, and that characterization is mostly correct. React has some mechanisms for maintaining internal state, but it has no opinion about or solutions for data flow and management, server communication,
+            routing, or other common frontend application concerns. --[Mastering React Native]</li>
+          <li>You need react.js and react-dom.js libraries. The first is universal to all platforms. The second one is used for web app only, which means if you are working with React Native, you dont need it.</li>
+          <li>To render an element into a DOM node, call <span style="background-color: #D7DDC6">ReactDOM.render()</span>.</li>
+          <li>Be default, React elements are immutable. Once you create an element, you can't change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time.</li>
+          <li>Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.</li>
+          <li>In practice, most React apps only call <span style="background-color: #D7DDC6">ReactDOM.render()</span> once.</li>
+          <li></li>
+
+
+        </ul>
+
+        <p style="font-size: 28px;">
+          Reference
+        </p>
+        <ul>
+          <li>Learning React: Introducing React</li>
+          <li>Mastering React: Introduction to ReactJS</li>
+          <li><a href="https://facebook.github.io/react/docs/thinking-in-react.html">Thinking in React</a></li>
+        </ul>
+
+        <p>The solution proposed by the React framework is to keep a representation of the DOM in memory, called a virtual DOM, and make all alterations there. Once the alterations have been made in memory, React can apply the minimum number of changes necessary to reconcile the real DOM with the virtual DOM. This also can allow quickly successive changes to be batched for greater efficiency. Taking this approach can lead to great gains in performance that can be noticed by end users.--[Mastering React Native]
+        </p>
+        <p>
+          <a href="https://facebook.github.io/react/docs/reconciliation.html"><img src="imgs/figure1.png" alt=""></a>
+        </p>
+
+      </section>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <div class="wrapper row3">
+    <footer id="footer" class="clear">
+      <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Domain Name</a></p>
+      <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    </footer>
+  </div>
+
+
+
+  <script src="scripts/react.15.6.1.js"></script>
+  <script src="scripts/react-dom.15.6.1.js"></script>
+  <script>
+    'use strict';
+
+    ReactDOM.render(React.createElement(
+      'h1',
+      null,
+      'First React!'
+    ), document.getElementById('reactContent'));
+  </script>
+</body>
+
+</html>
