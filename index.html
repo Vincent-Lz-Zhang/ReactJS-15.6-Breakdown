@@ -55,7 +55,17 @@
           <li>It is often relegated to only a view-layer solution, and that characterization is mostly correct. React has some mechanisms for maintaining internal state, but it has no opinion about or solutions for data flow and management, server communication,
             routing, or other common frontend application concerns. --[Mastering React Native]</li>
           <li>You need react.js and react-dom.js libraries. The first is universal to all platforms. The second one is used for web app only, which means if you are working with React Native, you dont need it.</li>
-          <li>To render an element into a DOM node, call <span style="background-color: #D7DDC6">ReactDOM.render()</span>.</li>
+          <li>To render an element into a DOM node, call <span style="background-color: #D7DDC6">ReactDOM.render()</span>.
+            <pre style='color:#55cc66;background:#001800;'>ReactDOM<span style='color:#808030; '>.</span>render<span style='color:#808030; '>(</span>React<span style='color:#808030; '>.</span>createElement<span style='color:#808030; '>(</span>
+      <span style='color:#800000; '>'</span><span style='color:#cc5555; '>h1</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span>
+      <span style='color:#0f4d75; '>null</span><span style='color:#808030; '>,</span>
+      <span style='color:#800000; '>'</span><span style='color:#cc5555; '>First React!</span><span style='color:#800000; '>'</span>
+    <span style='color:#808030; '>)</span><span style='color:#808030; '>,</span> document<span style='color:#808030; '>.</span>getElementById<span style='color:#808030; '>(</span><span style='color:#800000; '>'</span><span style='color:#cc5555; '>reactContent</span><span style='color:#800000; '>'</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+</pre>
+The HTML markup it generates:
+<pre style='color:#55cc66;background:#001800;'><span style='color:#865700; '>&lt;</span><span style='color:#508050; font-weight:bold; '>h1</span><span style='color:#477766; '> </span><span style='color:#477766; '>data</span><span style='color:#477766; '>-reactroot</span><span style='color:#808030; '>=</span><span style='color:#cc5555; '>""</span><span style='color:#865700; '>></span>First React!<span style='color:#865700; '>&lt;/</span><span style='color:#508050; font-weight:bold; '>h1</span><span style='color:#865700; '>></span>
+</pre>
+          </li>
           <li>Be default, React elements are immutable. Once you create an element, you can't change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time.</li>
           <li>Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.</li>
           <li>In practice, most React apps only call <span style="background-color: #D7DDC6">ReactDOM.render()</span> once.</li>
